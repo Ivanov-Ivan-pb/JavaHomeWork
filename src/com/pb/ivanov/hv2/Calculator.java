@@ -15,19 +15,25 @@ public class Calculator {
         System.out.println("Choose an operation +, -, /, *");
         char sign;
         sign = scanner.next().charAt(0);
-        int res;
         switch (sign) {
             case '+':
-                res = operand1 + operand2;
+                System.out.println("result"+(operand1+operand2));
                 break;
             case '-':
-                res = res = operand1 - operand2;
+                System.out.println("result"+(operand1-operand2));
                 break;
             case '/':
-                res = res = operand1 / operand2;
+                if(operand2==0){
+                    System.out.println("Cannot be divided by zero ");
+
+                }
+                else{
+                    System.out.println("result"+(operand1/operand2));
+                }
+
                 break;
             case '*':
-                res = res = operand1 * operand2;
+                System.out.println("result"+(operand1*operand2));
                 break;
 
         }
