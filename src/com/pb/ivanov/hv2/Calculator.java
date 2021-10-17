@@ -23,14 +23,12 @@ public class Calculator {
                 System.out.println("result"+(operand1-operand2));
                 break;
             case '/':
-                if(operand2==0){
-                    System.out.println("Cannot be divided by zero ");
-
-                }
-                else{
+                if(operand2!=0){
                     System.out.println("result"+(operand1/operand2));
                 }
-
+                else{
+                    System.out.println("Cannot be divided by zero ");
+                }
                 break;
             case '*':
                 System.out.println("result"+(operand1*operand2));
