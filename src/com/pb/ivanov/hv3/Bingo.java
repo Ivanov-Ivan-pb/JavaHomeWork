@@ -9,21 +9,34 @@ public class Bingo {
         int number;
         int count=0;
         int rand=100;
+        int exit=999;
         number=(int)(Math.random()*rand);
         System.out.println("Вгадайте число від 0 до 100"+rand);
+        System.out.println("Для закінчення гри введіть 999");
+        //++count;
         while(number != rand){
+            if(number==exit){
+                System.out.println("Гру завершено");
+                break;
+            }
             ++count;
             System.out.println("введіть число");
             number =scanner.nextInt();
+            //++count;
             if(number<rand){
                 System.out.println("Введене число менше загаданого");
-
             }
-            else if(number>rand){
+            if(number>rand){
                 System.out.println("Введене число більше від загаданого");
             }
+            if(number==rand){
+                System.out.println("Ви вгадали число з:"+ count +"разу");
+            }
         }
-        System.out.println("Ви вгадали число з:"+ count);
-
     }
 }
+
+
+
+
+
